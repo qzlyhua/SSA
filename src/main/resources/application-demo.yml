@@ -1,0 +1,9 @@
+server:
+  port: 8888
+qxt:
+  msgClient:
+    ip: 202.102.41.101
+    port: 9005
+    username: username
+    password: password
+    sign: 【XX家庭医生协会】
