@@ -22,6 +22,7 @@ import java.io.UnsupportedEncodingException;
 @Controller
 @StandardResponse
 @Slf4j
+@RequestMapping("/qxt")
 public class QxtSmsController extends BaseController {
     @Value("${qxt.msgClient.ip}")
     private String ipAddress;

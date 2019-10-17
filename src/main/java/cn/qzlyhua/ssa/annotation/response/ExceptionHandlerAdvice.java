@@ -24,7 +24,7 @@ public class ExceptionHandlerAdvice {
     @ExceptionHandler(Exception.class)
     public ResponseResult handleException(Exception e) {
         log.error(e.getMessage(), e);
-        return new ResponseResult(ResponseCode.SERVICE_ERROR.getCode(), ResponseCode.SERVICE_ERROR.getMessage(), null);
+        return new ResponseResult(ResponseCode.SERVICE_ERROR.getCode(), ResponseCode.SERVICE_ERROR.getMessage(), e.getMessage());
     }
 
     /**
@@ -36,7 +36,7 @@ public class ExceptionHandlerAdvice {
     @ExceptionHandler(RuntimeException.class)
     public ResponseResult handleRuntimeException(RuntimeException e) {
         log.error(e.getMessage(), e);
-        return new ResponseResult(ResponseCode.SERVICE_ERROR.getCode(), ResponseCode.SERVICE_ERROR.getMessage(), null);
+        return new ResponseResult(ResponseCode.SERVICE_ERROR.getCode(), ResponseCode.SERVICE_ERROR.getMessage(), e.getMessage());
     }
 
     /**
@@ -49,7 +49,7 @@ public class ExceptionHandlerAdvice {
     public ResponseResult handleIllegalArgumentException(IllegalArgumentException e) {
         log.error(e.getMessage(), e);
         return new ResponseResult(ResponseCode.ASSERT_ERROR.getCode(),
-                StringUtils.isEmpty(e.getMessage()) ? ResponseCode.ASSERT_ERROR.getMessage() : e.getMessage(), null);
+                StringUtils.isEmpty(e.getMessage()) ? ResponseCode.ASSERT_ERROR.getMessage() : e.getMessage(), e.getMessage());
     }
 
     /**

@@ -7,3 +7,11 @@ qxt:
     username: username
     password: password
     sign: 【XX家庭医生协会】
+webservice:
+  msgService:
+    address: http://IP:PORT/jcfw/services/MsgService?wsdl
+    username: username
+    password: password
+    ssxt: ssxt
+    ywmkdm: ywmkdm
+    sign: 【XX区卫健委】
