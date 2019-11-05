@@ -23,7 +23,7 @@ public class ResponseResult {
     /**
      * 数据
      */
-    private Object data;
+    private Object result;
 
     @Override
     public String toString() {
